@@ -8,106 +8,137 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckIcon } from "./Icons/CheckIcon";
+import { XIcon } from "./Icons/XIcon";
 
 export function PricingSection() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-[#f3f4f6]">
-      <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
-        <div className="space-y-3">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl main-color-text">
-            Pricing
-          </h2>
-          <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            Choose the plan that fits your needs and start transforming your
-            images today.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <Card className="bg-white dark:bg-gray-950 shadow-lg">
-            <CardHeader>
-              <CardTitle>Starter</CardTitle>
-              <CardDescription>
-                Perfect for individuals and small teams.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-2">
-                <p className="text-4xl font-bold main-color-text"></p>
-                <p className="text-gray-500 dark:text-gray-400">per month</p>
-              </div>
-              <ul className="space-y-2 mt-6">
-                <li className="flex items-center">
-                  <CheckIcon className="mr-2 h-4 w-4 main-color-text" />
-                  <span>5 image uploads per month</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckIcon className="mr-2 h-4 w-4 main-color-text" />
-                  <span>Up to 8x resolution upscaling</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckIcon className="mr-2 h-4 w-4 main-color-text" />
-                  <span>AI-powered colorization</span>
-                </li>
-              </ul>
-            </CardContent>
-            <CardFooter>
-              <Button
-                className="w-full main-color main-color-hover text-gray-50 main-color-dark-bg"
-                variant="default"
-              >
-                Start Free Trial
-              </Button>
-            </CardFooter>
-          </Card>
-          <Card className="bg-white dark:bg-gray-950 shadow-lg">
-            <CardHeader>
-              <CardTitle>Pro</CardTitle>
-              <CardDescription>
-                For teams and businesses with higher volume.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-2">
-                <p className="text-4xl font-bold main-color-text">9</p>
-                <p className="text-gray-500 dark:text-gray-400">per month</p>
-              </div>
-              <ul className="space-y-2 mt-6">
-                <li className="flex items-center">
-                  <CheckIcon className="mr-2 h-4 w-4 main-color-text" />
-                  <span>50 image uploads per month</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckIcon className="mr-2 h-4 w-4 main-color-text" />
-                  <span>Up to 8x resolution upscaling</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckIcon className="mr-2 h-4 w-4 main-color-text" />
-                  <span>AI-powered colorization</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckIcon className="mr-2 h-4 w-4 main-color-text" />
-                  <span>Batch processing</span>
-                </li>
-              </ul>
-            </CardContent>
-            <CardFooter>
-              <Button
-                className="w-full main-color main-color-hover text-gray-50 main-color-dark-bg"
-                variant="default"
-              >
-                Start Free Trial
-              </Button>
-            </CardFooter>
-          </Card>
-          <Card className="bg-white dark:bg-gray-950 shadow-lg">
-            <CardHeader>
-              <CardTitle>Enterprise</CardTitle>
-              <CardDescription>
-                Tailored solutions for large-scale needs.
-              </CardDescription>
-            </CardHeader>
-          </Card>
-        </div>
+    <section
+      className="grid gap-6 md:gap-8 py-12 md:py-16 max-w-5xl mx-auto px-10"
+      id="pricing"
+    >
+      <div className="grid gap-2 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+          Pricing
+        </h2>
+        <p className="text-gray-500 dark:text-gray-400">
+          Choose the plan that fits your needs.
+        </p>
+      </div>
+      <div className="grid md:grid-cols-3 gap-6">
+        <Card>
+          <CardHeader className="p-6">
+            <CardTitle>Free</CardTitle>
+            <CardDescription>Get started for free</CardDescription>
+          </CardHeader>
+          <CardContent className="grid gap-6">
+            <div className="text-4xl font-bold">$0</div>
+            <ul className="grid gap-3 text-sm">
+              <li className="flex items-center gap-2">
+                <CheckIcon className="w-5 h-5 fill-primary" />
+                Upscale images up to 1080p
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckIcon className="w-5 h-5 fill-primary" />
+                Basic image enhancement
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckIcon className="w-5 h-5 fill-primary" />5 image uploads
+                par mois
+              </li>
+              <li className="flex items-center gap-2 text-gray-500 dark:text-gray-400">
+                <XIcon className="w-5 h-5" />
+                No watermark
+              </li>
+              <li className="flex items-center gap-2 text-gray-500 dark:text-gray-400">
+                <XIcon className="w-5 h-5" />
+                No priority support
+              </li>
+            </ul>
+          </CardContent>
+          <CardFooter className="flex justify-end">
+            <Button className="w-full inline-flex h-9 items-center justify-center rounded-md border main-color-border main-color-border-hover bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:main-color-text focus-visible:outline-none main-color-focus disabled:pointer-events-none disabled:opacity-50 main-color-dark-border">
+              Essayer gratuitement
+            </Button>
+          </CardFooter>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Pro</CardTitle>
+            <CardDescription>Enhanced image upscaling</CardDescription>
+          </CardHeader>
+          <CardContent className="grid gap-6">
+            <div className="text-4xl font-bold">$9</div>
+            <div className="text-sm text-gray-500 dark:text-gray-400">
+              / mois
+            </div>
+            <ul className="grid gap-3 text-sm">
+              <li className="flex items-center gap-2">
+                <CheckIcon className="w-5 h-5 fill-primary" />
+                Upscale images up to 4K
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckIcon className="w-5 h-5 fill-primary" />
+                Advanced image enhancement
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckIcon className="w-5 h-5 fill-primary" />
+                20 images par mois
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckIcon className="w-5 h-5 fill-primary" />
+                No watermark
+              </li>
+              <li className="flex items-center gap-2 text-gray-500 dark:text-gray-400">
+                <XIcon className="w-5 h-5" />
+                No priority support
+              </li>
+            </ul>
+          </CardContent>
+          <CardFooter className="flex justify-end">
+            <Button className="w-full inline-flex h-9 items-center justify-center rounded-md main-color px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors main-color-hover focus-visible:outline-none main-color-focus disabled:pointer-events-none disabled:opacity-50 main-color-dark-bg">
+              Séléctionner
+            </Button>
+          </CardFooter>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Enterprise</CardTitle>
+            <CardDescription>Unlimited image upscaling</CardDescription>
+          </CardHeader>
+          <CardContent className="grid gap-6">
+            <div className="text-4xl font-bold">$49</div>
+            <div className="text-sm text-gray-500 dark:text-gray-400">
+              / mois
+            </div>
+            <ul className="grid gap-3 text-sm">
+              <li className="flex items-center gap-2">
+                <CheckIcon className="w-5 h-5 fill-primary" />
+                Upscale images up to 8K
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckIcon className="w-5 h-5 fill-primary" />
+                Advanced image enhancement
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckIcon className="w-5 h-5 fill-primary" />
+                Unlimited image uploads
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckIcon className="w-5 h-5 fill-primary" />
+                No watermark
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckIcon className="w-5 h-5 fill-primary" />
+                Priority support
+              </li>
+            </ul>
+          </CardContent>
+          <CardFooter className="flex justify-end">
+            <Button className="w-full inline-flex h-9 items-center justify-center rounded-md main-color px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors main-color-hover focus-visible:outline-none main-color-focus disabled:pointer-events-none disabled:opacity-50 main-color-dark-bg">
+              Séléctionner
+            </Button>
+          </CardFooter>
+        </Card>
       </div>
     </section>
   );
