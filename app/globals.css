@@ -13,7 +13,10 @@
     @apply text-[#ff874f];
   }
   .main-color-border {
-    @apply border-[#ea8c4d];
+    @apply border-[#d1d5db];
+  }
+  .main-color-border-hover {
+    @apply hover:border-[#ea8c4d];
   }
   .main-color-focus {
     @apply focus-visible:ring-[#d2864c];
