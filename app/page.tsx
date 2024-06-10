@@ -49,43 +49,43 @@ export default function LandingPage() {
       <main className="flex-1">
         <section className="w-full h-screen border-y flex justify-center items-center flex-nowrap">
           <div className="px-4 md:px-6 space-y-10 xl:space-y-16">
-            <div className="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16">
-              <div className="flex flex-col justify-start">
-                <h1 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem] text-[#6b46c1]">
-                  Unleash the Power of AI Image Upscaling
+            <div className="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2">
+              <div className="flex flex-col justify-start mt-0 lg:mt-8">
+                <h1 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem] main-color-text">
+                  Liberez le plein potentiel de vos images grâce à l'IA
                 </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Transform your images with our advanced AI-powered upscaling
-                  technology. Enhance resolution, colorize, and batch process
-                  with ease.
+                <p className="mx-auto max-w-[700px] text-gray-500 md:text-l mt-4 dark:text-gray-400">
+                  Notre logiciel d'agrandissement d'image alimenté par l'IA
+                  offre des résultats étonnants, de l'amélioration de la
+                  résolution à la colorisation intelligente.
                 </p>
                 <div className="space-x-4 mt-6">
                   <Link
-                    className="inline-flex h-9 items-center justify-center rounded-md bg-[#6b46c1] px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-[#553c9a] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6b46c1] disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-[#6b46c1] dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+                    className="inline-flex h-9 items-center justify-center rounded-md main-color px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors main-color-hover focus-visible:outline-none main-color-focus disabled:pointer-events-none disabled:opacity-50 main-color-dark-bg"
                     href="#"
                   >
-                    Start Free Trial
+                    Essai Gratuit
                   </Link>
                   <Link
-                    className="inline-flex h-9 items-center justify-center rounded-md border border-[#6b46c1] bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-[#6b46c1] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6b46c1] disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                    className="inline-flex h-9 items-center justify-center rounded-md border main-color-border bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:main-color-text focus-visible:outline-none main-color-focus disabled:pointer-events-none disabled:opacity-50 main-color-dark-border"
                     href="#"
                   >
-                    Buy Now
+                    En savoir plus
                   </Link>
                 </div>
               </div>
               <section className="w-full">
-                <div className="container px-4 md:px-6">
-                  <div className="mx-auto max-w-3xl">
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-gray-100 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg dark:bg-gray-800">
-                      <div className="absolute inset-0 flex items-center justify-center">
+                <div className="h-full container px-0 md:px-6 py-5 md:py-0">
+                  <div className="h-full mx-auto max-w-3xl">
+                    <div className="h-full relative aspect-[4/3] md:aspect-auto overflow-hidden rounded-2xl bg-gray-100 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg dark:bg-gray-800">
+                      <div className="absolute inset-0 flex items-center justify-center h-auto md:h-full">
                         <div className="flex flex-col items-center space-y-4">
                           <Upload />
                           <h3 className="text-2xl font-bold text-gray-700 dark:text-gray-200">
-                            Drop your files here
+                            Glisser votre fichier ici
                           </h3>
                           <p className="text-gray-500 dark:text-gray-400">
-                            or click to upload
+                            Ou clic pour pour upload
                           </p>
                         </div>
                       </div>
@@ -112,7 +112,7 @@ export default function LandingPage() {
           <div className="container space-y-12 px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-[#e9d8fd] px-3 py-1 text-sm text-[#6b46c1] dark:bg-gray-800">
+                <div className="inline-block rounded-lg bg-[#e9d8fd] px-3 py-1 text-sm main-color-text dark:bg-gray-800">
                   Key Features
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
@@ -127,14 +127,14 @@ export default function LandingPage() {
             </div>
             <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
               <div className="grid gap-1">
-                <ZoomInIcon className="h-8 w-8 text-[#6b46c1]" />
+                <ZoomInIcon className="h-8 w-8 main-color-text" />
                 <h3 className="text-lg font-bold">Upscale Resolution</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   Enlarge your images up to 8x without losing quality.
                 </p>
               </div>
               <div className="grid gap-1">
-                <PaletteIcon className="h-8 w-8 text-[#6b46c1]" />
+                <PaletteIcon className="h-8 w-8 main-color-text" />
                 <h3 className="text-lg font-bold">AI Colorization</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   Bring your black and white images to life with our intelligent
@@ -142,7 +142,7 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="grid gap-1">
-                <LayersIcon className="h-8 w-8 text-[#6b46c1]" />
+                <LayersIcon className="h-8 w-8 main-color-text" />
                 <h3 className="text-lg font-bold">Batch Processing</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   Upscale and colorize multiple images at once with our
@@ -155,7 +155,7 @@ export default function LandingPage() {
         <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
           <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-[#6b46c1]">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight main-color-text">
                 What Our Customers Say
               </h2>
               <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
@@ -228,7 +228,7 @@ export default function LandingPage() {
         <section className="w-full py-12 md:py-24 lg:py-32 bg-[#f3f4f6]">
           <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
             <div className="space-y-3">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#6b46c1]">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl main-color-text">
                 Pricing
               </h2>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
@@ -246,29 +246,29 @@ export default function LandingPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
-                    <p className="text-4xl font-bold text-[#6b46c1]">$9</p>
+                    <p className="text-4xl font-bold main-color-text">$9</p>
                     <p className="text-gray-500 dark:text-gray-400">
                       per month
                     </p>
                   </div>
                   <ul className="space-y-2 mt-6">
                     <li className="flex items-center">
-                      <CheckIcon className="mr-2 h-4 w-4 text-[#6b46c1]" />
+                      <CheckIcon className="mr-2 h-4 w-4 main-color-text" />
                       <span>5 image uploads per month</span>
                     </li>
                     <li className="flex items-center">
-                      <CheckIcon className="mr-2 h-4 w-4 text-[#6b46c1]" />
+                      <CheckIcon className="mr-2 h-4 w-4 main-color-text" />
                       <span>Up to 8x resolution upscaling</span>
                     </li>
                     <li className="flex items-center">
-                      <CheckIcon className="mr-2 h-4 w-4 text-[#6b46c1]" />
+                      <CheckIcon className="mr-2 h-4 w-4 main-color-text" />
                       <span>AI-powered colorization</span>
                     </li>
                   </ul>
                 </CardContent>
                 <CardFooter>
                   <Button
-                    className="w-full bg-[#6b46c1] hover:bg-[#553c9a] text-gray-50 dark:bg-gray-50 dark:text-[#6b46c1] dark:hover:bg-gray-50/90"
+                    className="w-full main-color main-color-hover text-gray-50 main-color-dark-bg"
                     variant="default"
                   >
                     Start Free Trial
@@ -284,33 +284,33 @@ export default function LandingPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
-                    <p className="text-4xl font-bold text-[#6b46c1]">$29</p>
+                    <p className="text-4xl font-bold main-color-text">$29</p>
                     <p className="text-gray-500 dark:text-gray-400">
                       per month
                     </p>
                   </div>
                   <ul className="space-y-2 mt-6">
                     <li className="flex items-center">
-                      <CheckIcon className="mr-2 h-4 w-4 text-[#6b46c1]" />
+                      <CheckIcon className="mr-2 h-4 w-4 main-color-text" />
                       <span>50 image uploads per month</span>
                     </li>
                     <li className="flex items-center">
-                      <CheckIcon className="mr-2 h-4 w-4 text-[#6b46c1]" />
+                      <CheckIcon className="mr-2 h-4 w-4 main-color-text" />
                       <span>Up to 8x resolution upscaling</span>
                     </li>
                     <li className="flex items-center">
-                      <CheckIcon className="mr-2 h-4 w-4 text-[#6b46c1]" />
+                      <CheckIcon className="mr-2 h-4 w-4 main-color-text" />
                       <span>AI-powered colorization</span>
                     </li>
                     <li className="flex items-center">
-                      <CheckIcon className="mr-2 h-4 w-4 text-[#6b46c1]" />
+                      <CheckIcon className="mr-2 h-4 w-4 main-color-text" />
                       <span>Batch processing</span>
                     </li>
                   </ul>
                 </CardContent>
                 <CardFooter>
                   <Button
-                    className="w-full bg-[#6b46c1] hover:bg-[#553c9a] text-gray-50 dark:bg-gray-50 dark:text-[#6b46c1] dark:hover:bg-gray-50/90"
+                    className="w-full main-color main-color-hover text-gray-50 main-color-dark-bg"
                     variant="default"
                   >
                     Start Free Trial
