@@ -2,28 +2,33 @@
 
 import Link from "next/link";
 import { useState, useRef } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, ErrorMessage } from "formik";
 import { Upload } from "lucide-react";
 import { validationSchema, FormValues } from "../types/form";
 import { upscaleImage } from "../utils/api";
-import useSWR from "swr";
+import Lottie from "lottie-react";
+import loaderAnimation from "public/loader-animation.json";
 
 export function HeroSection() {
   const [file, setFile] = useState<File | null>(null);
   const [imageURL, setImageURL] = useState<string | null>(null);
   const [upscaledImage, setUpscaledImage] = useState<string | null>(null);
-  const [downloadURL, setDownloadURL] = useState<string | null>(null); // Add a separate URL for download
+  const [downloadURL, setDownloadURL] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false); // Ajout de l'état pour le loader
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleSubmit = async (values: FormValues) => {
     if (values.file) {
       try {
+        setIsLoading(true); // Démarrage du loader
         const response = await upscaleImage(values.file);
         const url = URL.createObjectURL(response); // Create URL from blob
         setUpscaledImage(url);
         setDownloadURL(url); // Set download URL to the unblurred image
       } catch (error) {
         console.error("Upscale failed", error);
+      } finally {
+        setIsLoading(false); // Arrêt du loader
       }
     }
   };
@@ -82,59 +87,67 @@ export function HeroSection() {
                           )}
                         </div>
                         <div className="absolute inset-0 flex items-center justify-center h-auto md:h-full z-10 py-38 md:p-0">
-                          <div className="flex flex-col items-center space-y-4">
-                            <Upload />
-                            <h3 className="text-2xl font-bold text-gray-700 dark:text-gray-200">
-                              Glisser votre fichier ici
-                            </h3>
-                            <p className="text-gray-500 dark:text-gray-400">
-                              Ou clic pour pour upload
-                            </p>
-                            <input
-                              id="file"
-                              name="file"
-                              type="file"
-                              className="hidden"
-                              ref={fileInputRef}
-                              onChange={(event) => {
-                                const file =
-                                  event.currentTarget.files?.[0] || null;
-                                setFieldValue("file", file);
-                                setFile(file);
-                                if (file) {
-                                  const url = URL.createObjectURL(file);
-                                  setImageURL(url);
-                                }
-                              }}
+                          {isLoading ? (
+                            <Lottie
+                              animationData={loaderAnimation}
+                              loop={true}
+                              style={{ width: "30%", height: "30%" }}
                             />
+                          ) : (
+                            <div className="flex flex-col items-center space-y-4">
+                              <Upload />
+                              <h3 className="text-2xl font-bold text-gray-700 dark:text-gray-200">
+                                Glisser votre fichier ici
+                              </h3>
+                              <p className="text-gray-500 dark:text-gray-400">
+                                Ou clic pour pour upload
+                              </p>
+                              <input
+                                id="file"
+                                name="file"
+                                type="file"
+                                className="hidden"
+                                ref={fileInputRef}
+                                onChange={(event) => {
+                                  const file =
+                                    event.currentTarget.files?.[0] || null;
+                                  setFieldValue("file", file);
+                                  setFile(file);
+                                  if (file) {
+                                    const url = URL.createObjectURL(file);
+                                    setImageURL(url);
+                                  }
+                                }}
+                              />
 
-                            <label
-                              className="cursor-pointer inline-flex h-9 items-center justify-center rounded-md border main-color-border main-color-border-hover bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:main-color-text focus-visible:outline-none main-color-focus disabled:pointer-events-none disabled:opacity-50 main-color-dark-border"
-                              onClick={(event) => {
-                                event.preventDefault();
-                                fileInputRef.current?.click();
-                              }}
-                            >
-                              Choisir un fichier
-                            </label>
+                              <label
+                                className="cursor-pointer inline-flex h-9 items-center justify-center rounded-md border main-color-border main-color-border-hover bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:main-color-text focus-visible:outline-none main-color-focus disabled:pointer-events-none disabled:opacity-50 main-color-dark-border"
+                                onClick={(event) => {
+                                  event.preventDefault();
+                                  fileInputRef.current?.click();
+                                }}
+                              >
+                                Choisir un fichier
+                              </label>
 
-                            <ErrorMessage
-                              name="file"
-                              component="div"
-                              className="text-red-500 text-sm"
-                            />
-                            {file && (
-                              <div className="text-gray-700 dark:text-gray-200 px-10 text-ellipsis truncate w-9/12">
-                                {file.name}
-                              </div>
-                            )}
-                            <button
-                              type="submit"
-                              className="z-10 inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm main-color main-color-hover"
-                            >
-                              Envoyer
-                            </button>
-                          </div>
+                              <ErrorMessage
+                                name="file"
+                                component="div"
+                                className="text-red-500 text-sm"
+                              />
+                              {file && (
+                                <div className="text-gray-700 dark:text-gray-200 px-10 text-ellipsis truncate w-9/12">
+                                  {file.name}
+                                </div>
+                              )}
+                              <button
+                                type="submit"
+                                className="z-10 inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm main-color main-color-hover"
+                              >
+                                Envoyer
+                              </button>
+                            </div>
+                          )}
                         </div>
                       </Form>
                     )}
