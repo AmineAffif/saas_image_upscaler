@@ -56,7 +56,7 @@ export function PricingSection() {
             </ul>
           </CardContent>
           <CardFooter className="flex justify-end">
-            <Button className="w-full inline-flex h-9 items-center justify-center rounded-md border main-color-border main-color-border-hover bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:main-color-text focus-visible:outline-none main-color-focus disabled:pointer-events-none disabled:opacity-50 main-color-dark-border">
+            <Button className="w-full inline-flex h-9 items-center justify-center rounded-md text-black border main-color-border main-color-border-hover bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:main-color-text focus-visible:outline-none main-color-focus disabled:pointer-events-none disabled:opacity-50 main-color-dark-border">
               Essayer gratuitement
             </Button>
           </CardFooter>
@@ -96,7 +96,7 @@ export function PricingSection() {
           </CardContent>
           <CardFooter className="flex justify-end">
             <Button className="w-full inline-flex h-9 items-center justify-center rounded-md main-color px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors main-color-hover focus-visible:outline-none main-color-focus disabled:pointer-events-none disabled:opacity-50 main-color-dark-bg">
-              Séléctionner
+              Sélectionner
             </Button>
           </CardFooter>
         </Card>
@@ -135,7 +135,7 @@ export function PricingSection() {
           </CardContent>
           <CardFooter className="flex justify-end">
             <Button className="w-full inline-flex h-9 items-center justify-center rounded-md main-color px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors main-color-hover focus-visible:outline-none main-color-focus disabled:pointer-events-none disabled:opacity-50 main-color-dark-bg">
-              Séléctionner
+              Sélectionner
             </Button>
           </CardFooter>
         </Card>
