@@ -5,6 +5,7 @@ import { ReviewsSection } from "components/ReviewsSection";
 
 import { TestimonialsSection } from "components/TestimonialsSection";
 import { Header } from "components/Header";
+import Footer from "components/Footer";
 
 export default function LandingPage() {
   return (
@@ -16,6 +17,7 @@ export default function LandingPage() {
         <TestimonialsSection />
         <ReviewsSection />
         <PricingSection />
+        <Footer />
       </main>
     </div>
   );
