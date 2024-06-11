@@ -43,6 +43,14 @@ const ReviewCard = ({
 export function ReviewsSection() {
   return (
     <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background py-20">
+      <div className="grid gap-2 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+          Ils en parlent 😊
+        </h2>
+        <p className="text-gray-500 dark:text-gray-400 mb-7">
+          Voici tous les derniers avis de nos utilisateurs.
+        </p>
+      </div>
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />

@@ -18,7 +18,7 @@ export function PricingSection() {
     >
       <div className="grid gap-2 text-center">
         <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
-          Pricing
+          Tarifs
         </h2>
         <p className="text-gray-500 dark:text-gray-400">
           Choose the plan that fits your needs.

@@ -34,7 +34,7 @@ export function MobileMenu({ isOpen, toggleMenu }: MobileMenuProps) {
           href="#pricing"
           onClick={toggleMenu}
         >
-          Pricing
+          Tarifs
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"

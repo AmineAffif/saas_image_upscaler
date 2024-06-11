@@ -31,7 +31,7 @@ export function Header() {
           className="text-sm font-medium hover:underline underline-offset-4"
           href="#pricing"
         >
-          Pricing
+          Tarifs
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
