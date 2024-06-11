@@ -1,29 +1,9 @@
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
+import { reviews } from "./fakeReviews";
 
-const reviews = [
-  {
-    name: "Nathan Stamped",
-    username: "@smallD",
-    body: "Beau morceau",
-    img: "https://avatar.vercel.sh/jack",
-  },
-  {
-    name: "Thomas Ponpousseau",
-    username: "@fourInch",
-    body: "J'ai pu agrandir l'image de ma chienne 4X,",
-    img: "https://avatar.vercel.sh/jill",
-  },
-  {
-    name: "Hamadi Camara",
-    username: "@MalieonTop",
-    body: "Je vois désormais en couleurs",
-    img: "https://avatar.vercel.sh/jill",
-  },
-];
-
-const firstRow = reviews.slice(0, reviews.length / 1);
-const secondRow = reviews.slice(reviews.length / 2);
+const firstRow = reviews.slice(0, Math.ceil(reviews.length / 2));
+const secondRow = reviews.slice(Math.ceil(reviews.length / 2));
 
 const ReviewCard = ({
   img,
