@@ -30,11 +30,11 @@ const Footer = () => {
               Features
             </Link>
             <Link
-              href="#"
+              href="#pricing"
               className="text-gray-300 hover:text-white dark:text-gray-400 dark:hover:text-gray-50"
               prefetch={false}
             >
-              Pricing
+              Tarifs
             </Link>
             <Link
               href="#"
