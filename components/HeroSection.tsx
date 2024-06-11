@@ -1,36 +1,31 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as yup from "yup";
 import { Upload } from "lucide-react";
-import { FormValues } from "types/form";
-
-const validationSchema = yup.object().shape({
-  file: yup
-    .mixed()
-    .required("A file is required")
-    .test(
-      "fileSize",
-      "The file is too large",
-      (value) => value && (value as File).size <= 1024 * 1024 * 5 // 5MB
-    )
-    .test(
-      "fileType",
-      "Unsupported file format",
-      (value) =>
-        value && ["image/jpeg", "image/png"].includes((value as File).type)
-    ),
-});
+import { validationSchema, FormValues } from "../types/form";
+import { upscaleImage } from "../utils/api";
+import useSWR from "swr";
 
 export function HeroSection() {
   const [file, setFile] = useState<File | null>(null);
   const [imageURL, setImageURL] = useState<string | null>(null);
+  const [upscaledImage, setUpscaledImage] = useState<string | null>(null);
+  const [downloadURL, setDownloadURL] = useState<string | null>(null); // Add a separate URL for download
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleSubmit = (values: FormValues) => {
-    console.log(values.file);
-    // Handle file upload to API here
+  const handleSubmit = async (values: FormValues) => {
+    if (values.file) {
+      try {
+        const response = await upscaleImage(values.file);
+        const url = URL.createObjectURL(response); // Create URL from blob
+        setUpscaledImage(url);
+        setDownloadURL(url); // Set download URL to the unblurred image
+      } catch (error) {
+        console.error("Upscale failed", error);
+      }
+    }
   };
 
   return (
@@ -73,7 +68,7 @@ export function HeroSection() {
                     {({ setFieldValue }) => (
                       <Form className="h-full flex flex-col items-center space-y-4">
                         <div className="absolute inset-0">
-                          {imageURL && (
+                          {imageURL && !upscaledImage && (
                             <div
                               className="absolute inset-0"
                               style={{
@@ -100,6 +95,7 @@ export function HeroSection() {
                               name="file"
                               type="file"
                               className="hidden"
+                              ref={fileInputRef}
                               onChange={(event) => {
                                 const file =
                                   event.currentTarget.files?.[0] || null;
@@ -111,12 +107,17 @@ export function HeroSection() {
                                 }
                               }}
                             />
+
                             <label
-                              htmlFor="file"
                               className="cursor-pointer inline-flex h-9 items-center justify-center rounded-md border main-color-border main-color-border-hover bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:main-color-text focus-visible:outline-none main-color-focus disabled:pointer-events-none disabled:opacity-50 main-color-dark-border"
+                              onClick={(event) => {
+                                event.preventDefault();
+                                fileInputRef.current?.click();
+                              }}
                             >
                               Choisir un fichier
                             </label>
+
                             <ErrorMessage
                               name="file"
                               component="div"
@@ -129,7 +130,7 @@ export function HeroSection() {
                             )}
                             <button
                               type="submit"
-                              className=" z-10 inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm main-color main-color-hover"
+                              className="z-10 inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm main-color main-color-hover"
                             >
                               Envoyer
                             </button>
@@ -138,11 +139,22 @@ export function HeroSection() {
                       </Form>
                     )}
                   </Formik>
-                  <img
-                    src="/placeholder.svg"
-                    alt="Drop zone"
-                    className="h-full w-full object-cover object-center transition-all duration-300 hover:scale-[1.05]"
-                  />
+                  {upscaledImage && (
+                    <div className="absolute inset-0 flex items-center justify-center h-auto md:h-full z-10">
+                      <img
+                        src={upscaledImage}
+                        alt="Upscaled Image"
+                        className="h-full w-full object-cover object-center transition-all duration-300 hover:scale-[1.05]"
+                      />
+                      <a
+                        href={downloadURL || ""} // Utiliser l'URL de téléchargement non floutée
+                        download="upscaled_image.png"
+                        className="absolute bottom-5 inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm main-color main-color-hover"
+                      >
+                        Télécharger
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
