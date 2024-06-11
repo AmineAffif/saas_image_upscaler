@@ -1,3 +1,4 @@
+![image](https://github.com/AmineAffif/saas_image_upscaler/assets/45182137/b62d12b5-f46d-4724-af60-1064a1115b7e)
 
 # Next.js Starter Project
 
