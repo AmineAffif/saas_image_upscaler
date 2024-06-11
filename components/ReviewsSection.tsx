@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
-import { reviews } from "./fakeReviews";
+import { reviews } from "./FakeReviews";
 
 const firstRow = reviews.slice(0, Math.ceil(reviews.length / 2));
 const secondRow = reviews.slice(Math.ceil(reviews.length / 2));
