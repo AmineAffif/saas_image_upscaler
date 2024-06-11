@@ -10,6 +10,7 @@
     "lint": "tsc --noEmit && eslint '**/*.{js,jsx,ts,tsx}'"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.4.1",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-toast": "^1.1.5",
     "axios": "^1.7.2",
