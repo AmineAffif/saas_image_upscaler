@@ -20,7 +20,8 @@ export function FeaturesSection() {
               Key Features
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-              Améliorez vos images avec notre outil gratuit
+              Améliorez vos images <br />
+              avec notre outil gratuit
             </h2>
             <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
               Nous utilisons la dernière technologie d'intelligence artificielle
