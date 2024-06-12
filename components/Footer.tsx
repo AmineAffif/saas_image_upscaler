@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex items-center max-md:my-5">
           <Link href="#" className="flex items-center" prefetch={false}>
             <MountainIcon className="h-6 w-6 text-white" />
-            <span className="ml-2 text-white">Upscale</span>
+            <span className="ml-2 text-white">Scaly</span>
           </Link>
         </div>
         <div className="text-sm max-md:my-5">
@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="container mx-auto flex items-center justify-center px-4 pt-16 sm:px-6 lg:px-8 w-full">
-        <div className="text-sm">&copy; 2024 Upscale. All rights reserved.</div>
+        <div className="text-sm">&copy; 2024 Scaly. All rights reserved.</div>
       </div>
     </footer>
   );
