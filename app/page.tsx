@@ -3,7 +3,6 @@ import { FeaturesSection } from "components/FeaturesSection";
 import { PricingSection } from "components/PricingSection";
 import { ReviewsSection } from "components/ReviewsSection";
 
-import { TestimonialsSection } from "components/TestimonialsSection";
 import { Header } from "components/Header";
 import Footer from "components/Footer";
 
@@ -14,7 +13,6 @@ export default function LandingPage() {
       <main className="flex-1">
         <HeroSection />
         <FeaturesSection />
-        <TestimonialsSection />
         <ReviewsSection />
         <PricingSection />
         <Footer />
