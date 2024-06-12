@@ -9,6 +9,7 @@ import ExampleSection from "components/ExampleSection";
 
 import { Header } from "components/Header";
 import Footer from "components/Footer";
+import { FaqSection } from "components/FaqSection";
 
 export default function LandingPage() {
   return (
@@ -21,6 +22,7 @@ export default function LandingPage() {
         <ReviewsSection />
         <PricingSection />
         <ExampleSection />
+        <FaqSection />
         <Footer />
       </main>
     </div>
