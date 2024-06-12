@@ -21,7 +21,7 @@ export function Header() {
         <span className="ml-2 text-black">Scaly</span>
         <span className="sr-only">Image Upscaler</span>
       </Link>
-      <nav className="ml-auto hidden lg:flex gap-4 sm:gap-6">
+      <nav className="ml-auto hidden lg:flex gap-4 sm:gap-6 items-center">
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
           href="#feature"
@@ -45,6 +45,18 @@ export function Header() {
           href="#"
         >
           Contact
+        </Link>
+        <Link
+          className="inline-flex h-9 items-center justify-center rounded-md border main-color-border main-color-border-hover bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:main-color-text focus-visible:outline-none main-color-focus disabled:pointer-events-none disabled:opacity-50 main-color-dark-border"
+          href="#"
+        >
+          Connexion
+        </Link>
+        <Link
+          className="inline-flex h-9 items-center justify-center rounded-md main-color px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors main-color-hover focus-visible:outline-none main-color-focus disabled:pointer-events-none disabled:opacity-50 main-color-dark-bg"
+          href="#"
+        >
+          Inscription
         </Link>
       </nav>
       <div className="lg:hidden">
