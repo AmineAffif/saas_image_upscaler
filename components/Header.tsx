@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { MountainIcon } from "./Icons/MountainIcon";
 import { MenuIcon } from "./Icons/MenuIcon";
 import { MobileMenu } from "./MobileMenu";
 import { XIcon } from "./Icons/XIcon";
@@ -18,7 +17,6 @@ export function Header() {
   return (
     <header className="px-4 md:px-20 lg:px-28 h-14 flex items-center justify-between absolute top-0 left-0 w-full">
       <Link className="flex items-center justify-center" href="#">
-        {/* <MountainIcon className="h-6 w-6" /> */}
         <Image src="/logo-scaly-min.jpg" alt="Before" width={35} height={35} />
         <span className="ml-2 text-black">Scaly</span>
         <span className="sr-only">Scaly</span>
