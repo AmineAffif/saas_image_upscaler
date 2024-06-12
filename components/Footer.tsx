@@ -9,7 +9,6 @@ const Footer = () => {
       <div className="container mx-auto flex items-center justify-between px-4 sm:px-16 lg:px-12 max-md:flex-col">
         <div className="flex items-center max-md:my-5">
           <Link href="#" className="flex items-center" prefetch={false}>
-            <MountainIcon className="h-6 w-6 text-white" />
             <span className="ml-2 text-white">Scaly</span>
           </Link>
         </div>
