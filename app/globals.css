@@ -4,25 +4,25 @@
 
 @layer utilities {
   .main-color {
-    @apply bg-[#ec8a51];
+    @apply bg-[#5199ec];
   }
   .main-color-hover {
-    @apply hover:bg-[#ff9c6a];
+    @apply hover:bg-[#6aabff];
   }
   .main-color-text {
-    @apply text-[#ff874f];
+    @apply text-[#4f8bff];
   }
   .main-color-border {
     @apply border-[#d1d5db];
   }
   .main-color-border-hover {
-    @apply hover:border-[#ea8c4d];
+    @apply hover:border-[#4d96ea];
   }
   .main-color-focus {
-    @apply focus-visible:ring-[#d2864c];
+    @apply focus-visible:ring-[#4c96d2];
   }
   .main-color-dark {
-    @apply dark:text-[#c17546];
+    @apply dark:text-[#468ec1];
   }
   .main-color-dark-bg {
     @apply dark:bg-gray-50 dark:text-[#c17b46] dark:hover:bg-gray-50/90;

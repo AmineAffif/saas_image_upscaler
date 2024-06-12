@@ -4,7 +4,7 @@ import { ImgComparisonSlider } from "@img-comparison-slider/react";
 
 export default function ComparisonSection() {
   return (
-    <div className="h-screen w-full px-4 lg:px-24 pt-0 pb-20 flex flex-col lg:flex-row justify-center items-center">
+    <div className="h-screen w-full px-4lg:px-24 pt-0 pb-20 flex flex-col lg:flex-row justify-center items-center">
       <ImgComparisonSlider>
         <div slot="first">
           <Image
