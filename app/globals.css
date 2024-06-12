@@ -1,6 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer utilities {
   .main-color {
@@ -29,6 +29,9 @@
   }
   .main-color-dark-border {
     @apply dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300;
+  }
+  .secondary-color-text {
+    @apply text-[#000000];
   }
 }
 
