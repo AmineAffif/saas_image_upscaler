@@ -17,7 +17,11 @@ export function FaqSection() {
         </p>
       </div>
       <div className="flex flex-col items-center justify-center space-y-4 text-center w-full">
-        <Accordion type="single" collapsible className="w-3/5">
+        <Accordion
+          type="single"
+          collapsible
+          className="sm:w-full md:w-3/5 lg:w-3/5 xl:w-3/5 px-4 text-left"
+        >
           <AccordionItem value="item-1">
             <AccordionTrigger>Qu'est-ce que Scaly ?</AccordionTrigger>
             <AccordionContent>
