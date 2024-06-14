@@ -12,6 +12,7 @@ import { FaqSection } from "components/FaqSection";
 import Footer from "components/Footer";
 import { Header } from "components/Header";
 import { motion } from "framer-motion";
+import UserProofSection from "components/UserProofSection";
 
 export default function LandingPage() {
   return (
@@ -33,6 +34,7 @@ export default function LandingPage() {
             <ComparisonSection />
             <FeaturesSection />
             <ReviewsSection />
+            <UserProofSection />
             <PricingSection />
             <ExampleSection />
             <FaqSection />
