@@ -4,31 +4,31 @@ import { ImgComparisonSlider } from "@img-comparison-slider/react";
 
 export default function ComparisonSection() {
   return (
-    <div className="h-screen w-full px-4lg:px-24 pt-0 pb-20 flex flex-col lg:flex-row justify-center items-center">
+    <div className="h-screen max-sm:h-auto max-sm:pb-20 w-full flex flex-col px-4lg:px-24 pt-0 justify-center items-center">
+      <div className="flex items-end my-10">
+        <h3 className="text-xl font-bold tracking-tighter sm:text-5xl">
+          Rattrapez
+        </h3>
+        <span className="text-sm font-extralight tracking-normal">
+          (presque)
+        </span>{" "}
+        <h3 className="text-xl font-bold tracking-tighter sm:text-5xl">
+          Tous les défauts
+        </h3>
+      </div>
       <ImgComparisonSlider>
         <div slot="first">
           <Image
             src="/landscape-pixelized.webp"
             alt="Before"
-            width={980}
-            height={551}
+            width={588}
+            height={330}
           />
         </div>
         <div slot="second">
-          <Image src="/landscape.webp" alt="After" width={980} height={551} />
+          <Image src="/landscape.webp" alt="After" width={588} height={330} />
         </div>
       </ImgComparisonSlider>
-      <div className="flex flex-col items-start mt-10 lg:mt-0 ml-0 lg:ml-10">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-          Rattrapez
-        </h2>
-        <span className="text-sm font-extralight tracking-normal">
-          (presque)
-        </span>{" "}
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-          Tous les défauts
-        </h2>
-      </div>
     </div>
   );
 }

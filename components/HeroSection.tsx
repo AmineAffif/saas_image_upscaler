@@ -8,6 +8,7 @@ import { validationSchema, FormValues } from "../types/form";
 import { upscaleImage } from "../utils/api";
 import Lottie from "lottie-react";
 import loaderAnimation from "public/loader-animation.json";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 export function HeroSection() {
   const [file, setFile] = useState<File | null>(null);
@@ -64,14 +65,15 @@ export function HeroSection() {
           <section className="w-full">
             <div className="h-full container px-0 md:px-6 py-5 md:py-0">
               <div className="h-full mx-auto max-w-3xl">
-                <div className="h-full relative aspect-[4/3] md:aspect-auto overflow-hidden rounded-2xl bg-gray-100 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg dark:bg-gray-800">
+                <div className="h-full relative aspect-[4/3] md:aspect-auto overflow-hidden rounded-2xl bg-[#f0f8ff] transition-all duration-300 hover:scale-[1.02] hover:shadow-lg dark:bg-gray-800">
+                  <BorderBeam />
                   <Formik
                     initialValues={{ file: null }}
                     validationSchema={validationSchema}
                     onSubmit={handleSubmit}
                   >
                     {({ setFieldValue }) => (
-                      <Form className="h-full flex flex-col items-center space-y-4">
+                      <Form className="h-full flex flex-col items-center">
                         <div className="absolute inset-0">
                           {imageURL && !upscaledImage && (
                             <div
@@ -86,7 +88,7 @@ export function HeroSection() {
                             />
                           )}
                         </div>
-                        <div className="absolute inset-0 flex items-center justify-center h-auto md:h-full z-10 py-38 md:p-0">
+                        <div className="absolute inset-0 flex items-center justify-center h-auto md:h-full z-10 py-38 md:p-0 my-0">
                           {isLoading ? (
                             <Lottie
                               animationData={loaderAnimation}
