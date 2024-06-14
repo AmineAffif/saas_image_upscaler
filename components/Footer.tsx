@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
-import { MountainIcon } from "./Icons/MountainIcon";
 import { Github, Twitter, Linkedin } from "lucide-react";
 
 const Footer = () => {
@@ -8,8 +8,15 @@ const Footer = () => {
     <footer className="bg-gray-900 py-16 text-gray-400">
       <div className="container mx-auto flex items-center justify-between px-4 sm:px-16 lg:px-12 max-md:flex-col">
         <div className="flex items-center max-md:my-5">
-          <Link href="#" className="flex items-center" prefetch={false}>
-            <span className="ml-2 text-white">Scaly</span>
+          <Link className="flex items-center justify-center" href="#">
+            <Image
+              src="/logo-scaly-min.png"
+              alt="Before"
+              width={35}
+              height={35}
+            />
+            <span className="ml-2 text-black">Scaly</span>
+            <span className="sr-only">Scaly</span>
           </Link>
         </div>
         <div className="text-sm max-md:my-5">
