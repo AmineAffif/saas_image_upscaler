@@ -65,7 +65,7 @@ export function HeroSection() {
           <section className="w-full">
             <div className="h-full container px-0 md:px-6 py-5 md:py-0">
               <div className="h-full mx-auto max-w-3xl">
-                <div className="h-full relative aspect-[4/3] md:aspect-auto overflow-hidden rounded-2xl bg-[#f0f8ff] transition-all duration-300 hover:scale-[1.02] hover:shadow-lg dark:bg-gray-800">
+                <div className="p-10 h-full relative aspect-[4/3] md:aspect-auto overflow-hidden rounded-2xl bg-[#f0f8ff] transition-all duration-300 hover:scale-[1.02] hover:shadow-lg dark:bg-gray-800">
                   <BorderBeam />
                   <Formik
                     initialValues={{ file: null }}

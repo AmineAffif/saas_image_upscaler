@@ -27,7 +27,7 @@ export function MobileMenu({ isOpen, toggleMenu }: MobileMenuProps) {
           href="#"
           onClick={toggleMenu}
         >
-          Features
+          Fonctionatlités
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
@@ -41,7 +41,7 @@ export function MobileMenu({ isOpen, toggleMenu }: MobileMenuProps) {
           href="#"
           onClick={toggleMenu}
         >
-          About
+          À propos
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"

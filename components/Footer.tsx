@@ -33,7 +33,7 @@ const Footer = () => {
               className="text-gray-300 hover:text-white dark:text-gray-400 dark:hover:text-gray-50"
               prefetch={false}
             >
-              Features
+              Fonctionatlités
             </Link>
             <Link
               href="#pricing"

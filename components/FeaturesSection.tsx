@@ -20,7 +20,7 @@ export function FeaturesSection() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <div className="inline-block rounded-lg bg-[#e9d8fd] px-3 py-1 text-sm main-color-text dark:bg-gray-800">
-              Key Features
+              Fonctionatlités clés
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
               Améliorez vos images <br />
