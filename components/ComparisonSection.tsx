@@ -21,12 +21,12 @@ export default function ComparisonSection() {
           <Image
             src="/landscape-pixelized.webp"
             alt="Before"
-            width={588}
+            width={800}
             height={330}
           />
         </div>
         <div slot="second">
-          <Image src="/landscape.webp" alt="After" width={588} height={330} />
+          <Image src="/landscape.webp" alt="After" width={800} height={330} />
         </div>
       </ImgComparisonSlider>
     </div>
