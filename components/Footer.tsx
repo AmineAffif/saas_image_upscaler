@@ -22,14 +22,14 @@ const Footer = () => {
         <div className="text-sm max-md:my-5">
           <nav className="flex flex-wrap justify-center gap-6 md:justify-start">
             <Link
-              href="#"
+              href="#home"
               className="text-gray-300 hover:text-white dark:text-gray-400 dark:hover:text-gray-50"
               prefetch={false}
             >
               Home
             </Link>
             <Link
-              href="#"
+              href="#feature"
               className="text-gray-300 hover:text-white dark:text-gray-400 dark:hover:text-gray-50"
               prefetch={false}
             >
@@ -43,11 +43,11 @@ const Footer = () => {
               Tarifs
             </Link>
             <Link
-              href="#"
               className="text-gray-300 hover:text-white dark:text-gray-400 dark:hover:text-gray-50"
+              href="#faq"
               prefetch={false}
             >
-              Contact
+              À propos
             </Link>
           </nav>
         </div>

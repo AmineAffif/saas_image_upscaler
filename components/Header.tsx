@@ -36,9 +36,9 @@ export function Header() {
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#"
+          href="#faq"
         >
-          Contact
+          À propos
         </Link>
         <Link
           className="inline-flex h-9 items-center justify-center rounded-md border main-color-border main-color-border-hover bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:main-color-text focus-visible:outline-none main-color-focus disabled:pointer-events-none disabled:opacity-50 main-color-dark-border"

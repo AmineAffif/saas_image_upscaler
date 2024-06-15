@@ -24,7 +24,7 @@ export function MobileMenu({ isOpen, toggleMenu }: MobileMenuProps) {
       <div className="flex flex-col items-center space-y-4">
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#"
+          href="#feature"
           onClick={toggleMenu}
         >
           Fonctionatlités
@@ -38,17 +38,10 @@ export function MobileMenu({ isOpen, toggleMenu }: MobileMenuProps) {
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#"
+          href="#faq"
           onClick={toggleMenu}
         >
           À propos
-        </Link>
-        <Link
-          className="text-sm font-medium hover:underline underline-offset-4"
-          href="#"
-          onClick={toggleMenu}
-        >
-          Contact
         </Link>
       </div>
     </div>

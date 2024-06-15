@@ -35,7 +35,10 @@ export function HeroSection() {
   };
 
   return (
-    <section className="py-40 pb-10 w-full h-auto border-y flex justify-center items-center flex-nowrap border-none">
+    <section
+      id="home"
+      className="py-40 pb-10 w-full h-auto border-y flex justify-center items-center flex-nowrap border-none"
+    >
       <div className="px-4 md:px-6 space-y-10 xl:space-y-16">
         <div className="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2">
           <div className="flex flex-col justify-start mt-0 lg:mt-8">
