@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Scaly",
-  description: "Upscale your visuals with Scaly",
+  description: "Améliorez vos images avec Scaly",
 };
 
 export default function RootLayout({
