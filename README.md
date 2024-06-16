@@ -6,7 +6,10 @@ Scaly est un SaaS qui utilise l'IA pour améliorer la résolution et la qualité
 Vous pouvez tester l'app avec 10 images de votre galerie sur [scaly-fr.vercel.app](https://scaly-fr.vercel.app/)
 (Coût de 0,2 crédit par image étendue pris sur mes 20 crédits)
 _Attention à utiliser des images dont le contenu ne seraient pas suceptibles d'être bloqué par l'api d'upscale_
+
+
 https://github-production-user-asset-6210df.s3.amazonaws.com/45182137/340115716-d5e1adc2-f209-4d9c-b7ac-c1d39774f6cf.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240616%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240616T155954Z&X-Amz-Expires=300&X-Amz-Signature=d8218ad0297d7316731d3fd9458b819ab894eaded1babda57307d3636145d5ad&X-Amz-SignedHeaders=host&actor_id=45182137&key_id=0&repo_id=813110514
+
 
 --------------------------------------------------------
 
