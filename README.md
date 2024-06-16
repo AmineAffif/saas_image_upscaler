@@ -1,3 +1,6 @@
+![bannerAJ](https://github.com/AmineAffif/scaly/assets/45182137/c70d3f00-070a-43e1-ba7f-d2eeddb844ea)
+
+
 # Scaly - Améliorez vos images avec l'IA 🚀
 
 Scaly est un SaaS qui utilise l'IA pour améliorer la résolution et la qualité des images, offrant des outils de mise à l'échelle, de traitement par lots et d'édition, tout en garantissant la confidentialité et l'utilisation commerciale sans frais cachés. 🖼️🔍🔐
