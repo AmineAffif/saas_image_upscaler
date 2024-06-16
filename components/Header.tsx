@@ -23,18 +23,24 @@ export function Header() {
       </Link>
       <nav className="ml-auto hidden lg:flex gap-4 sm:gap-6 items-center">
         <Link
+          legacyBehavior
+          passHref
           className="text-sm font-medium hover:underline underline-offset-4"
           href="#feature"
         >
           Fonctionatlités
         </Link>
         <Link
+          legacyBehavior
+          passHref
           className="text-sm font-medium hover:underline underline-offset-4"
           href="#pricing"
         >
           Tarifs
         </Link>
         <Link
+          legacyBehavior
+          passHref
           className="text-sm font-medium hover:underline underline-offset-4"
           href="#faq"
         >
