@@ -61,7 +61,7 @@ ou si vous utilisez yarn :
 yarn dev
 ```
 
-Votre application sera accessible à l'adresse [http://localhost:3000](http://localhost:3000).
+Votre application sera accessible à l'adresse [http://localhost:3000](http://localhost:3001).
 
 ## Structure du projet 🗂️
 
