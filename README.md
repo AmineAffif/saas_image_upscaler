@@ -1,10 +1,8 @@
-![image](https://github.com/AmineAffif/saas_image_upscaler/assets/45182137/b62d12b5-f46d-4724-af60-1064a1115b7e)
+# Scaly - Améliorez vos images avec l'IA 🚀
 
-# Next.js Starter Project
+Scaly est un SaaS qui utilise l'IA pour améliorer la résolution et la qualité des images, offrant des outils de mise à l'échelle, de traitement par lots et d'édition, tout en garantissant la confidentialité et l'utilisation commerciale sans frais cachés. 🖼️🔍🔐
 
-Ce projet est un template de base pour les applications développées avec Next.js. Il est conçu pour servir de point de départ pour tous vos futurs projets en simplifiant la configuration initiale et en standardisant la structure du code.
-
-## Prérequis
+## Prérequis 📋
 
 Avant de commencer, assurez-vous d'avoir installé Node.js sur votre machine. Node.js 12.0 ou une version ultérieure est nécessaire pour utiliser Next.js.
 
@@ -22,17 +20,17 @@ ou si vous utilisez yarn :
 yarn install
 ```
 
-## Configuration
+## Configuration ⚙️
 
 Vous pouvez configurer votre application en modifiant les variables d'environnement. Créez un fichier `.env.local` à la racine du projet et ajoutez vos variables :
 
 ```plaintext
-API_URL=https://example.com/api
+NEXT_PUBLIC_STABILITY_API_KEY=VOTRE_CLÉ_API_ICI
 ```
 
-Remplacez `https://example.com/api` par l'URL de votre choix.
+Remplacez `VOTRE_CLÉ_API_ICI` par votre propre clé API générée sur [Stability AI](https://platform.stability.ai/account/keys).
 
-## Démarrage du serveur de développement
+## Démarrage du serveur de développement 🖥️
 
 Pour lancer le serveur de développement, exécutez :
 
@@ -48,7 +46,7 @@ yarn dev
 
 Votre application sera accessible à l'adresse [http://localhost:3000](http://localhost:3000).
 
-## Structure du projet
+## Structure du projet 🗂️
 
 Voici la structure de base du projet :
 
@@ -60,19 +58,6 @@ Voici la structure de base du projet :
 
 Pour déployer votre application, vous pouvez utiliser Vercel, une plateforme cloud optimisée pour les applications Next.js. Consultez la [documentation officielle de Vercel](https://vercel.com/docs) pour plus d'informations.
 
-## More libraries 🎨
-
-  - Cool components:
-  <a href="https://ui.shadcn.com/" target="_blank">https://ui.shadcn.com/</a> or <a href="https://ui.aceternity.com/" target="_blank">https://ui.aceternity.com/</a>
-  - Charts:
-  <a href="https://recharts.org/en-US/" target="_blank">https://recharts.org/en-US/</a>
-  - Animated or fixed illustrations:
-  <a href="https://storyset.com/" target="_blank">https://storyset.com/</a>
-  - Animated icons:
-  <a href="https://lottiefiles.com/" target="_blank">https://lottiefiles.com/</a> or <a href="https://lordicon.com/icons" target="_blank">https://lordicon.com/icons</a>
-  - More icons: For more icons
-  <a href="https://iconduck.com/" target="_blank">https://iconduck.com/</a>
-
-## Licence
+## Licence 📜
 
 Ce projet est sous licence MIT. Pour plus d'informations, consultez le fichier `LICENSE`.
