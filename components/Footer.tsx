@@ -15,7 +15,7 @@ const Footer = () => {
               width={35}
               height={35}
             />
-            <span className="ml-2 text-black">Scaly</span>
+            <span className="ml-2 text-gray-300">Scaly</span>
             <span className="sr-only">Scaly</span>
           </Link>
         </div>
