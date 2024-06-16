@@ -2,6 +2,15 @@
 
 Scaly est un SaaS qui utilise l'IA pour améliorer la résolution et la qualité des images, offrant des outils de mise à l'échelle, de traitement par lots et d'édition, tout en garantissant la confidentialité et l'utilisation commerciale sans frais cachés. 🖼️🔍🔐
 
+# Démo 🕹️
+Vous pouvez tester l'app avec 10 images de votre galerie sur [scaly-fr.vercel.app](https://scaly-fr.vercel.app/)
+(Coût de 0,2 crédit par image étendue pris sur mes 20 crédits)
+_Attention à utiliser des images dont le contenu ne seraient pas suceptibles d'être bloqué par l'api d'upscale_
+https://github.com/AmineAffif/scaly/assets/45182137/d5e1adc2-f209-4d9c-b7ac-c1d39774f6cf
+
+--------------------------------------------------------
+
+# Pour lancer en local 🏠
 ## Prérequis 📋
 
 Avant de commencer, assurez-vous d'avoir installé Node.js sur votre machine. Node.js 12.0 ou une version ultérieure est nécessaire pour utiliser Next.js.
